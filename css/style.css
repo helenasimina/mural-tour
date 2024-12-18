@@ -1,0 +1,159 @@
+/*OVERALL PAGE FORMATTING, DO NOT EDIT*/
+html,body{
+    height:100%;
+}
+body{
+    margin:0;
+}
+.modal-title{
+    font-family:"Knewave", serif;
+    position:center;
+}
+
+/*FONT LOADING*/
+/*Update with selected Google Font*/
+body, .leaflet-popup-content{
+    font-family: "Finlandica", sans-serif !important;
+}
+
+/*BUTTON STYLING*/
+/*Color and border design for all buttons*/
+button{
+    border:2px black solid;
+    background:rgba(255,255,255,1);
+    font-size:14pt !important;
+}
+button:hover{
+    background:rgb(255, 176, 239);
+}
+
+/*MAP INTERFACE*/
+/*MAP*/
+#map{
+    width:100vw;
+    height:100%;
+    position:absolute;
+}
+/*LOCATION BUTTON ("Where am I")*/
+
+.location-button{
+    display:block;
+    width:180px;
+    height:40px;
+    bottom:20px;
+    right:calc(50% - 90px);
+    font-size:20px;
+    position:absolute;
+    font-weight:bold;
+    z-index:500;
+}
+/*STOP STYLING*/
+.active-stop{
+    fill:rgb(255, 2, 213);
+    stroke:rgb(54, 0, 105);
+}
+.inactive-stop{
+    fill:rgb(93, 212, 212);
+    stroke:rgb(51, 49, 173);
+
+}
+/*ROUTE STYLING*/
+
+.active-route{
+    stroke:rgb(140, 0, 255);
+}
+.inactive-route{
+    stroke:rgb(255, 196, 0);
+    
+}
+
+
+
+/*NAVIGATION BAR*/
+.tour-navbar, .dropdown-menu{
+    z-index:2000;/*do not edit the z-index*/
+    background-color:white !important; /*background color of navigation bar*/
+}
+/*stop buttons in navigation bar*/
+.dropdown-menu{
+    border:none !important;
+}
+.dropdown-item{
+    white-space: wrap !important;
+}
+.dropdown-item:hover{
+    cursor:pointer;
+}
+
+/*SPLASH SCREEN STYLING*/
+#splash-dialogue, #splash-content, #splash-modal{
+    background-color:white;/*background color of the splash screen*/
+    color:black;/*text color of the splash screen*/
+    margin:0;
+    max-width: 100vw !important;
+    width:100vw !important;
+    height:100vh !important;
+    z-index:5000;
+}
+#splash-body{
+    height:100%;
+    padding-bottom:20px;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
+}
+#splash-title{
+    font-size:48px;
+}
+#splash-content p{
+    font-size:18px;
+}
+#start{
+    margin:auto;
+    display:block;
+}
+
+/*STOP CONTENT STYLING*/
+#stop-modal{
+    z-index:3000;
+}
+#title-container{
+    padding-left:10px;
+}
+#stop-content{
+    background:white; /*adjust background color of stop*/
+    color:black; /*adjust font color of stop*/
+    width:100vw;
+    margin:0;
+    border-radius: 0;
+}
+#stop-dialogue{
+    height:100%;
+    margin:0;
+}
+#stop-body{
+    height:100%;
+    overflow:scroll;
+}
+#stop-img{
+    width:100%;
+}
+#stop-text{
+    margin-top:10px;
+    font-size:20px;
+}
+#stop-footer{
+    display:block !important;
+}
+#prev{
+    float:left;
+}
+#next{
+    float:right;
+}
+
+/*RESPONSIVE DESIGN*/
+@media (min-width: 992px) {
+    .dropdown-menu{
+        width:300px;
+    }
+}

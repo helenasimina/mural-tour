@@ -12,29 +12,6 @@ https://www.facebook.com/ArtAddictsPage/videos/monarch-butterflies-street-art-mu
 
 
 
-# Web Walking Tour
-This library provides a framework for the creation and implementation of a map-based guided tour, delivered through a browser. The library was created as a teaching tool for an advanced cartography course at the University of Wisconsin-Madison, for students with little to no programming experience, and beginner HTML/CSS skills. As such, this framework is designed to help develop graphic design skills through HTML/CSS (without touching JS). On a theoretical level, the creation of map-based guided tour allows students to explore the relationship between _maps_ and places that are _mapped_. 
-
-For those more familiar with JavaScript, the libary can be easily adapted to new pedagogical and practical contexts. The library is built using [Leaflet](https://leafletjs.com/), [Bootstrap](https://getbootstrap.com/), and [Papa Parse](https://www.papaparse.com/). 
-
-The library currently utilizes sample content created for a Green Stormwater Infrastructure Tour created in partnership between the UW Cartography Lab, and Wisconsin Sea Grant.
-
-# Getting Started
-Begin by downloading the zip file of the library ([main.zip](https://github.com/cartobaldrica/web-walking-tour/archive/refs/heads/main.zip)), or cloning it to your local computer.
-
-# Structure
-The __Web Walking Tour__ is structured through a single webpage interface. The tour itself is comprised of _stops_ and a _route_, both presented on a slippy map interface. Each _stop_ is a point location, while the _route_ is a linestring between each stop. When a _stop_ is selected, it opens a modal interface presenting images and text about the selected stop. 
-
-- _index.html_: Main HTML page from which the tour is delivered.
-- __assets__: Contains the two files which control the tour stops and route. 
-    - _stops.csv_: This file contains information about individual stops, including the stop name, description, image, and the lat/lon of its location. (more below)
-    - _route.geojson_: This file contains geographic information regarding routes between each stop.
-- __img__: Contains all images shown on either the main page, or at individual tour stops.
-- __css__: Contains _style.css_ which controls the style of the interface.
-- __lib__: Contains external JS/CSS dependencies.
-- __js__: Contains _main.js_, the file which builds tour functionality.
-
-# Documentation
 
 ### _index.html_
 _index.html_ contains two custom HTML parameters which allow you to change the tour basemap based on those in the Leaflet [provider's demo](https://leaflet-extras.github.io/leaflet-providers/preview/), or a custom UTL. Both are found within the `<div id='map'>`. 
